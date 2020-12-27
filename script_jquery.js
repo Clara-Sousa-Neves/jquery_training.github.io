@@ -1,4 +1,5 @@
 //$(function() {})
+//$().ready(function(){})
 
 $(document).ready(function() {
 
@@ -30,6 +31,20 @@ $(document).ready(function() {
         $("#i4").show();
     });
 
+    //let h1 = $("h1");
+    //let oneNumber = $("<p>ola 1111</p>");
+
+    // h1.append(oneNumber);
+    //$("<p>222222</p>").appendTo(h1);
+
+    //h1.prepend(oneNumber);
+    //$("<p>222222</p>").prependTo(h1);
+
+    // $("p").html("<strong>Negrito</strong> Bla bla bla");
+    //$("p").text("<strong>Negrito</strong> Bla bla bla");
+
+    $("h1").append("<p>Experience</p>");
+    $("<p>More experiences</p>").prependTo(".appends");
 
     $("button").click(function() {
         $("h1").hide();
@@ -40,7 +55,7 @@ $(document).ready(function() {
 
     $("#red").click(function() {
         $("p").css("color", "red");
-        $("p").hide();
+        //$("p").hide();
         $("#red")
             .removeClass("red");
     });
@@ -52,13 +67,10 @@ $(document).ready(function() {
         $("p").fadeIn("slow");
         $("#message").text("Color changed!");
         $("#message").css("color", "gold");
-        $("#message").css("border", "2px solid gold");
-        // $("#message").css(color: "gold", border: "2px solid gold", backgroundColor: "blue");
+        $("#message").css({ border: "2px solid gold", backgroundColor: "blue" });
         $("#message").fadeOut(3000);
         $("#message")
-            .addClass("green");
+            // .addClass("green");
 
     });
-
-
 });
